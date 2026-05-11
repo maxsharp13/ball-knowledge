@@ -1,0 +1,40 @@
+.details {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .details__category {
+    color: #f97316;
+    font-weight: 700;
+  }
+  
+  .details__title {
+    font-size: 42px;
+    margin-bottom: 20px;
+  }
+  
+  .details__image {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 16px;
+    margin-bottom: 24px;
+  }
+  
+  .details__difficulty {
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  
+  .details__description {
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+  
+  .related {
+    margin-top: 60px;
+  }
+  
+  .related__grid {
+    display: grid;
+    gap: 20px;
+  }

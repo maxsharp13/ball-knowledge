@@ -1,0 +1,145 @@
+body {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+button,
+input,
+select {
+  font-family: inherit;
+}
+
+.page {
+  margin: 0 auto;
+  max-width: 980px;
+  padding: 42px 20px;
+}
+
+.page__subtitle {
+  color: #cbd5e1;
+  font-size: 17px;
+  line-height: 1.5;
+  max-width: 720px;
+}
+
+.hero {
+  margin-bottom: 28px;
+}
+
+.hero__title {
+  font-size: 48px;
+  margin: 0 0 12px;
+}
+
+.hero__subtitle {
+  color: #cbd5e1;
+  font-size: 18px;
+  line-height: 1.5;
+  max-width: 760px;
+}
+
+.search,
+.event-search {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 24px 0;
+}
+
+.search__input,
+.event-search__input {
+  border: 1px solid #475569;
+  border-radius: 8px;
+  font-size: 16px;
+  min-width: 180px;
+  padding: 11px 12px;
+}
+
+.search__button {
+  background: #2563eb;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 11px 14px;
+}
+
+.search__button:hover {
+  background: #1d4ed8;
+}
+
+.search__button_secondary {
+  background: #475569;
+}
+
+.search__hint {
+  color: #cbd5e1;
+}
+
+.results {
+  margin-top: 24px;
+}
+
+.profile-section {
+  margin-top: 34px;
+}
+
+.profile-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.profile-tags__item {
+  background: #2563eb;
+  border-radius: 999px;
+  font-weight: 700;
+  padding: 8px 12px;
+}
+
+.team-card {
+  align-items: center;
+  background: #ffffff;
+  border-radius: 16px;
+  color: #111827;
+  display: flex;
+  gap: 18px;
+  margin-bottom: 18px;
+  padding: 18px;
+}
+
+.team-card__image {
+  width: 72px;
+}
+
+.team-card__title {
+  margin: 0 0 8px;
+}
+
+.team-card__meta {
+  color: #475569;
+  margin: 0 0 10px;
+}
+
+@media (max-width: 600px) {
+  .hero__title {
+    font-size: 36px;
+  }
+
+  .search__input,
+  .event-search__input {
+    width: 100%;
+  }
+
+  .search__button {
+    width: 100%;
+  }
+
+  .team-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
