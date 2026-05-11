@@ -41,7 +41,36 @@ const createPlay = async (req, res) => {
   }
 };
 
-module.exports = {
-  getPlays,
-  createPlay,
-};
+const deletePlay = async (req, res) => {
+    try {
+      const play = await Play.findById(req.params.id);
+  
+      if (!play) {
+        return res.status(404).send({
+          message: "Play not found",
+        });
+      }
+  
+      if (play.owner.toString() !== req.user._id) {
+        return res.status(403).send({
+          message: "Not authorized",
+        });
+      }
+  
+      await Play.findByIdAndDelete(req.params.id);
+  
+      res.send({
+        message: "Play deleted",
+      });
+    } catch (err) {
+      res.status(500).send({
+        message: err.message,
+      });
+    }
+  };
+
+  module.exports = {
+    getPlays,
+    createPlay,
+    deletePlay,
+  };
