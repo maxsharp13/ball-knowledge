@@ -1,0 +1,61 @@
+.profile-button {
+    padding: 12px 20px;
+    border-radius: 10px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .profile-button:hover {
+    background: #1d4ed8;
+  }
+  
+  .profile-button_logout {
+    background: #dc2626;
+  }
+  
+  .profile-button_logout:hover {
+    background: #b91c1c;
+  }
+
+  .profile-section {
+    margin-top: 34px;
+  }
+  
+  .profile-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .profile-tags__item {
+    background: #2563eb;
+    border-radius: 999px;
+    font-weight: 700;
+    padding: 8px 12px;
+  }
+
+  .profile-actions {
+    display: flex;
+  
+    gap: 15px;
+  
+    margin-top: 20px;
+  
+    flex-wrap: wrap;
+  }
+  
+  .profile-plays {
+    margin-top: 40px;
+  }
+  
+  .profile-play-card {
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }

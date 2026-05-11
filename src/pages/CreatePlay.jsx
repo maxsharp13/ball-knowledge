@@ -1,6 +1,11 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+import "./Auth.css";
 
 function CreatePlay() {
+  const navigate = useNavigate();
+
   const [title, setTitle] = useState("");
 
   const [category, setCategory] = useState("");
@@ -43,11 +48,11 @@ function CreatePlay() {
       const data = await response.json();
 
       if (response.ok) {
-        alert("Play uploaded");
-
         console.log(data);
+
+        navigate("/community-plays");
       } else {
-        alert(data.message);
+        alert(data.message || "Upload failed");
       }
     } catch (err) {
       console.log(err);

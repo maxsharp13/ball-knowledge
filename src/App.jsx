@@ -9,10 +9,13 @@ import Register from "./pages/Register";
 import ConceptDetails from "./pages/ConceptDetails";
 import CreatePlay from "./pages/CreatePlay";
 import CommunityPlays from "./pages/CommunityPlays";
+import ProtectedRoute from "./components/ProtectedRoute";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <Router>
+       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
 
@@ -26,7 +29,7 @@ function App() {
 
         <Route path="/register" element={<Register />} />
 
-        <Route path="/upload-play" element={<CreatePlay />} />
+        <Route path="/upload-play" element={ <ProtectedRoute> <CreatePlay /> </ProtectedRoute> } />
 
         <Route path="/community-plays" element={<CommunityPlays />} />
 

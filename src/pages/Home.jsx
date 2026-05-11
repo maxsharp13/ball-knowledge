@@ -1,10 +1,8 @@
-import Navbar from "../components/Navbar";
 import FeaturedConcepts from "../components/FeaturedConcepts";
 
 function Home() {
   return (
     <main className="page">
-      <Navbar />
 
       <section className="hero">
         <h1 className="hero__title">Ball Knowledge</h1>

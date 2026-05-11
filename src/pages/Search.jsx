@@ -1,8 +1,8 @@
 import { useState } from "react";
-import Navbar from "../components/Navbar";
 import ConceptCard from "../components/ConceptCard";
 import basketballConceptsData from "../data/basketballConceptsData";
 import { searchConcepts } from "../utils/searchConcepts";
+import "./Search.css";
 
 function Search() {
   const [query, setQuery] = useState("");
@@ -25,7 +25,6 @@ function Search() {
 
   return (
     <main className="page">
-      <Navbar />
 
       <h1>Learn Basketball Concepts</h1>
       <p className="page__subtitle">

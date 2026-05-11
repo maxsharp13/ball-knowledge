@@ -1,11 +1,12 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Auth.css";
 
 function Register() {
+  const navigate = useNavigate();
+
   const [name, setName] = useState("");
-
   const [email, setEmail] = useState("");
-
   const [password, setPassword] = useState("");
 
   const handleRegister = async (e) => {
@@ -14,11 +15,9 @@ function Register() {
     try {
       const response = await fetch("http://localhost:3001/signup", {
         method: "POST",
-
         headers: {
           "Content-Type": "application/json",
         },
-
         body: JSON.stringify({
           name,
           email,
@@ -29,13 +28,12 @@ function Register() {
       const data = await response.json();
 
       if (response.ok) {
-        alert("Account created successfully");
+        navigate("/login");
       } else {
         alert(data.message || "Registration failed");
       }
     } catch (err) {
       console.log(err);
-
       alert("Server error");
     }
   };
@@ -69,9 +67,7 @@ function Register() {
           required
         />
 
-        <button type="submit">
-          Create Account
-        </button>
+        <button type="submit">Create Account</button>
       </form>
     </main>
   );

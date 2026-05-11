@@ -1,7 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Auth.css";
 
 function Login() {
+  const navigate = useNavigate();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -14,7 +17,6 @@ function Login() {
         headers: {
           "Content-Type": "application/json",
         },
-
         body: JSON.stringify({
           email,
           password,
@@ -23,16 +25,14 @@ function Login() {
 
       const data = await response.json();
 
-      if (data.token) {
+      if (response.ok && data.token) {
         localStorage.setItem("jwt", data.token);
-
-        alert("Login successful");
+        navigate("/profile");
       } else {
         alert(data.message || "Login failed");
       }
     } catch (err) {
       console.log(err);
-
       alert("Server error");
     }
   };
@@ -58,9 +58,7 @@ function Login() {
           required
         />
 
-        <button type="submit">
-          Login
-        </button>
+        <button type="submit">Login</button>
       </form>
     </main>
   );

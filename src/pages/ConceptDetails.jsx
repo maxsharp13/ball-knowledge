@@ -1,5 +1,4 @@
 import { useParams } from "react-router-dom";
-import Navbar from "../components/Navbar";
 import basketballConceptsData from "../data/basketballConceptsData";
 import ConceptCard from "../components/ConceptCard";
 import "./ConceptDetails.css";
@@ -14,7 +13,6 @@ function ConceptDetails() {
   if (!concept) {
     return (
       <main className="page">
-        <Navbar />
         <h1>Concept Not Found</h1>
       </main>
     );
