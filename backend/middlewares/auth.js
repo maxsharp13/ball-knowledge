@@ -1,28 +1,41 @@
-const jwt = require("jsonwebtoken");
+require("dotenv").config();
 
-module.exports = (req, res, next) => {
-  try {
-    const { authorization } = req.headers;
+const express = require("express");
+const mongoose = require("mongoose");
+const cors = require("cors");
 
-    if (!authorization) {
-      return res.status(401).send({
-        message: "Authorization required",
-      });
-    }
+const userRoutes = require("./routes/users");
+const playRoutes = require("./routes/plays");
 
-    const token = authorization.replace("Bearer ", "");
+const auth = require("./middlewares/auth");
 
-    const payload = jwt.verify(
-      token,
-      "super-secret-key"
-    );
+const app = express();
 
-    req.user = payload;
+const { PORT = 3001 } = process.env;
 
-    next();
-  } catch (err) {
-    return res.status(401).send({
-      message: "Invalid token",
-    });
-  }
-};
+app.use(cors());
+
+app.use(express.json());
+
+mongoose
+  .connect(process.env.MONGO_URI)
+  .then(() => {
+    console.log("Connected to MongoDB");
+  })
+  .catch((err) => {
+    console.log("MongoDB connection error:", err);
+  });
+
+app.get("/", (req, res) => {
+  res.send({
+    message: "Ball Knowledge backend running",
+  });
+});
+
+app.use(userRoutes);
+
+app.use("/plays", auth, playRoutes);
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});

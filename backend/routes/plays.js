@@ -3,15 +3,15 @@ const router = require("express").Router();
 const auth = require("../middlewares/auth");
 
 const {
-  getPlays,
-  createPlay,
-  deletePlay,
-} = require("../controllers/plays");
+  createUser,
+  login,
+  getCurrentUser,
+} = require("../controllers/users");
 
-router.get("/plays", getPlays);
+router.post("/signup", createUser);
 
-router.post("/plays", auth, createPlay);
+router.post("/signin", login);
 
-router.delete("/plays/:id", auth, deletePlay);
+router.get("/users/me", auth, getCurrentUser);
 
 module.exports = router;
