@@ -30,5 +30,5 @@ Express + MongoDB Atlas backend with protected API routes.
 
 Max Sharpnack
 
-## link to site
+## link to site:
 https://ball-knowledge-ten.vercel.app/
