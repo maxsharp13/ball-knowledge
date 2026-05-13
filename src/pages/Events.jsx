@@ -19,7 +19,6 @@ function Events() {
 
   return (
     <main className="page">
-      <Navbar />
 
       <h1>Browse Playbook</h1>
       <p className="page__subtitle">
