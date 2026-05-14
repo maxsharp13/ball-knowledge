@@ -7,6 +7,22 @@ const checkResponse = (res) => {
   return res.json();
 };
 
+export const login = (email, password) => {
+  return fetch(`${BASE_URL}/signin`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email, password }),
+  }).then(checkResponse);
+};
+
+export const register = (name, email, password) => {
+  return fetch(`${BASE_URL}/signup`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ name, email, password }),
+  }).then(checkResponse);
+};
+
 export const getPlays = () => {
   const token = localStorage.getItem("jwt");
   return fetch(`${BASE_URL}/plays`, {
@@ -23,5 +39,13 @@ export const createPlay = (playData) => {
       Authorization: `Bearer ${token}`,
     },
     body: JSON.stringify(playData),
+  }).then(checkResponse);
+};
+
+export const deletePlay = (id) => {
+  const token = localStorage.getItem("jwt");
+  return fetch(`${BASE_URL}/plays/${id}`, {
+    method: "DELETE",
+    headers: { Authorization: `Bearer ${token}` },
   }).then(checkResponse);
 };

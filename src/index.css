@@ -40,23 +40,6 @@ select {
   max-width: 760px;
 }
 
-.profile-section {
-  margin-top: 34px;
-}
-
-.profile-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.profile-tags__item {
-  background: #2563eb;
-  border-radius: 999px;
-  font-weight: 700;
-  padding: 8px 12px;
-}
-
 .team-card {
   align-items: center;
   background: #ffffff;
@@ -99,4 +82,15 @@ select {
     align-items: flex-start;
     flex-direction: column;
   }
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('/fonts/Oswald-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Oswald', Arial, sans-serif;
 }

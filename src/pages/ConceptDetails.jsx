@@ -26,7 +26,6 @@ function ConceptDetails() {
 
   return (
     <main className="page">
-      <Navbar />
 
       <section className="details">
         <p className="details__category">
