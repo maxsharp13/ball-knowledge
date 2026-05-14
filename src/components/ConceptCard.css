@@ -1,0 +1,97 @@
+.card {
+    background: #ffffff;
+    border-radius: 16px;
+    color: #111827;
+    margin-bottom: 20px;
+    padding: 22px;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.18);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px rgba(15, 23, 42, 0.24);
+  }
+  
+  .card__sport {
+    color: #64748b;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+  }
+  
+  .card__title {
+    font-size: 22px;
+    margin: 0 0 10px;
+  }
+  
+  .card__image {
+    display: block;
+    margin: 12px 0;
+    width: 92px;
+  }
+  
+  .card__meta,
+  .card__teams {
+    color: #475569;
+    font-size: 14px;
+    margin: 8px 0;
+  }
+  
+  .card__desc {
+    color: #334155;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 12px 0 0;
+  }
+  
+  .card__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 18px;
+  }
+  
+  .card__button {
+    background: #2563eb;
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 700;
+    padding: 9px 14px;
+  }
+  
+  .card__button:hover {
+    background: #1d4ed8;
+  }
+  
+  .card__button_disabled,
+  .card__button_disabled:hover {
+    background: #94a3b8;
+    cursor: default;
+  }
+
+  .card__image_large {
+    width: 100%;
+    max-height: 260px;
+    object-fit: contain;
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 12px;
+  }
+
+  .card__learn-more {
+    background: #2563eb;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .card__learn-more:hover {
+    opacity: 0.9;
+  }

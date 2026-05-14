@@ -1,0 +1,96 @@
+body {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+button,
+input,
+select {
+  font-family: inherit;
+}
+
+.page {
+  margin: 0 auto;
+  max-width: 980px;
+  padding: 42px 20px;
+}
+
+.page__subtitle {
+  color: #cbd5e1;
+  font-size: 17px;
+  line-height: 1.5;
+  max-width: 720px;
+}
+
+.hero {
+  margin-bottom: 28px;
+}
+
+.hero__title {
+  font-size: 48px;
+  margin: 0 0 12px;
+}
+
+.hero__subtitle {
+  color: #cbd5e1;
+  font-size: 18px;
+  line-height: 1.5;
+  max-width: 760px;
+}
+
+.team-card {
+  align-items: center;
+  background: #ffffff;
+  border-radius: 16px;
+  color: #111827;
+  display: flex;
+  gap: 18px;
+  margin-bottom: 18px;
+  padding: 18px;
+}
+
+.team-card__image {
+  width: 72px;
+}
+
+.team-card__title {
+  margin: 0 0 8px;
+}
+
+.team-card__meta {
+  color: #475569;
+  margin: 0 0 10px;
+}
+
+@media (max-width: 600px) {
+  .hero__title {
+    font-size: 36px;
+  }
+
+  .search__input,
+  .event-search__input {
+    width: 100%;
+  }
+
+  .search__button {
+    width: 100%;
+  }
+
+  .team-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('/fonts/Oswald-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Oswald', Arial, sans-serif;
+}
