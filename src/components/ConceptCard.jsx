@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { FavoritesContext } from "../context/FavoritesContext";
 import "./ConceptCard.css";
-import { Link } from "react-router-dom";
 
 function ConceptCard({ concept, isProfile }) {
   const { favorites, addFavorite, removeFavorite } =

@@ -1,5 +1,4 @@
 import { useMemo, useState } from "react";
-import Navbar from "../components/Navbar";
 import ConceptCard from "../components/ConceptCard";
 import basketballConceptsData from "../data/basketballConceptsData";
 

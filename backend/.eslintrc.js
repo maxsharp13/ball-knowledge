@@ -1,5 +1,9 @@
 module.exports = {
     extends: ['airbnb-base'],
+    env: {
+      node: true,
+      es2021: true,
+    },
     rules: {
       'no-underscore-dangle': ['error', { allow: ['_id'] }],
     },
