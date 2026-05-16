@@ -11,10 +11,15 @@ function Profile() {
   useEffect(() => {
     const token = localStorage.getItem("jwt");
     if (token) {
-      setLoggedIn(true);
       getPlays()
-        .then((data) => setPlays(data))
-        .catch(() => setError("Could not load your plays."));
+        .then((data) => {
+          setLoggedIn(true);
+          setPlays(data);
+        })
+        .catch(() => {
+          setLoggedIn(true);
+          setError("Could not load your plays.");
+        });
     }
   }, []);
 

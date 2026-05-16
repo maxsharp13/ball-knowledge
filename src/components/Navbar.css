@@ -1,16 +1,40 @@
 .nav {
     display: flex;
-    gap: 18px;
+    justify-content: center;
+    align-items: center;
+  
+    flex-wrap: wrap;
+  
+    gap: 12px;
+  
     margin-bottom: 32px;
+    padding: 12px;
   }
   
   .nav__link {
     color: #cbd5f5;
     font-weight: 700;
     text-decoration: none;
+  
+    padding: 6px 10px;
+    border-radius: 8px;
+  
+    font-size: 16px;
   }
   
   .nav__link:hover,
   .nav__link.active {
     color: #ffffff;
+    background: rgba(255, 255, 255, 0.08);
+  }
+  
+  @media screen and (max-width: 480px) {
+    .nav {
+      gap: 8px;
+    }
+  
+    .nav__link {
+      font-size: 13px;
+      padding: 4px 8px;
+    }
   }

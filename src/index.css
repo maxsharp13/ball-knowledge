@@ -84,9 +84,11 @@ select {
   }
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap');
+
 @font-face {
   font-family: 'Oswald';
-  src: url('/fonts/Oswald-VariableFont_wght.ttf') format('truetype');
+  src: url('https://fonts.gstatic.com/s/oswald/v53/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvsUZiZQ.woff2') format('woff2');
   font-weight: 100 900;
   font-style: normal;
 }

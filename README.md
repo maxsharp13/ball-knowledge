@@ -32,3 +32,8 @@ Max Sharpnack
 
 ## link to site
 https://ball-knowledge-ten.vercel.app/
+
+## Test Credentials
+
+Email: test@ballknowledge.com
+Password: Test1234!
